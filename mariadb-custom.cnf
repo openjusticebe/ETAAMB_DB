@@ -1,0 +1,12 @@
+[mysqld]
+max_connections=500
+
+[mariadb]
+thread_handling=pool-of-threads
+thread_pool_idle_timeout=20
+
+[client-server]
+socket = /run/mysqld/mysqld.sock
+
+!includedir /etc/mysql/mariadb.conf.d/
+!includedir /etc/mysql/conf.d/
